@@ -111,7 +111,7 @@ int main()
     for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++)
             adj_matrix[i][j] = err_d();
-    cout << endl;
+    cout << endl; 
 
     cout << "Введите начальную вершину: ";
     int s = err_v(n); 
