@@ -1,4 +1,4 @@
-﻿#include <iostream>
+﻿ #include <iostream>
 #include <Windows.h>
 #include <clocale>
 #include <vector>
@@ -83,7 +83,7 @@ void result(int* dist_matrix, int n, int s) {
         if (dist_matrix[i] == 30000) check_m = false;
         break;
     }
-    if (check_m == false) cout << "Ошибка! Даннный орграф невозможно исследовать с помощью алгоритма Дейкстры";
+    if (check_m == false) cout << "Ошибка! Данный орграф невозможно исследовать с помощью алгоритма Дейкстры";
     else {
         cout << "Кратчайшие пути от начальной вершины до всех остальных вершин орграфа: " << endl;
         for (int i = 0; i < n; i++)
@@ -97,9 +97,8 @@ int main()
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    int n;
-    cout << "Введите количество вершин дерева: ";
-    n = err_n();
+    cout << "Введите количество вершин орграфа: ";
+    int n = err_n();
 
     int** adj_matrix = new int* [n];
     for (int i = 0; i < n; i++)
@@ -114,9 +113,8 @@ int main()
             adj_matrix[i][j] = err_d();
     cout << endl;
 
-    int s;
     cout << "Введите начальную вершину: ";
-    s = err_v(n); 
+    int s = err_v(n); 
     s--;
 
     int* dist_matrix = new int [n];
